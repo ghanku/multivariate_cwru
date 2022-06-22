@@ -33,7 +33,7 @@ class CWRU:
     # Seed = seed for random shuffle, sens = the amount of sensors to use in the preprocessing, 
     # Rpm = rotations per minute (four different options are available) multiple inputs are possible, normal_condition = boolean operator to include normal conditions or not
     def __init__(self, experiment, length, trainsplit, seed,sens, *rpm, normal_condition = True):
-        if experiment not in ('12DriveEndFault', '12FanEndFault', '48DriveEndFault'):
+        if experiment not in ('12DriveEndFault', '12FanEndFault', '48DriveEndFault', 'NormalBaseline'):
             print("wrong experiment name: {}".format(experiment))
             sys.exit(1) 
         for i in rpm:
